@@ -170,11 +170,7 @@ class WWVSIconSVGOptimizer extends enshrined\svgSanitize\Sanitizer {
     $this->collapseUselessGroups();
     $this->cleanupTransforms();
 //    $this->removeEmptyContainers();
-
-
     $this->sortAttributes();
-
-
     $this->addAriaHidden();
 
     return $this->svg_file['content'];
@@ -1409,21 +1405,16 @@ class WWVSIconSVGOptimizer extends enshrined\svgSanitize\Sanitizer {
    * Sort SVG element attributes into a specific order.
    */
   private function sortAttributes() {
-    $stop = '';
     $xml = $this->svg_file['xml'];
 
-    $stop = $xml->getElementsByTagName('*');
     // Loop through all of the elements in the document.
     foreach ($xml->getElementsByTagName('*') as $elem) {
-      // print '<pre>';
-      // print_r($elem->tagName);
-      // print '</pre>';
+
       if ($elem->hasAttributes()) {
 
         // Get the original attributes out and into an array that can be sorted.
         $attrs = array();
         $unordered_attrs = array();
-        $thing = $elem->attributes;
         while ($attr = $elem->attributes->item(0)) {
           if (in_array($attr->name, $this->attrOrder)) {
             $attrs[$attr->name] = $attr->nodeValue;
