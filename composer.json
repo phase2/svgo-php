@@ -1,0 +1,7 @@
+{
+  "name": "phase2/svgo-php",
+  "description": "This is a PHP port of the SVGO library to optimize SVG vector graphic files.",
+  "require": {
+      "php": "^5.3.3 || ^7.0"
+  }
+}
