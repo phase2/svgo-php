@@ -1,0 +1,12 @@
+{
+  "name": "phase2/svgo-php",
+  "description": "This is a PHP port of the SVGO [ https://github.com/svg/svgo ] library to optimize SVG vector graphic files.",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "keywords": ["SVG", "SVGO", "SVG Optimize"],
+  "homepage": "https://github.com/phase2/svgo-php",
+  "type": "library",
+  "require": {
+      "php": "^5.3.3 || ^7.0"
+  }
+}
